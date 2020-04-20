@@ -51,11 +51,16 @@ displayHistory()
 
 
 /**
- * Initialize a new game by resetting all values and content on the page
- * HINT: reset the correctNumber, guesses, and HTML content
+ * // Reset correctNumber
+ * // Reset result display - displayResult 
+ * // Reset guesses array - guesses
+ * // Reset guessHistory Display - saveGuessHistory
  */
 function initGame(){
-  // *CODE GOES BELOW HERE *
+  correctNumber = getRandomNumber();
+  document.getElementById("result").innerHTML = '';
+  guesses = [];
+  displayHistory();
 }
 
 /**
@@ -73,11 +78,8 @@ function getRandomNumber(){
 
 /**
  * Save guess history 
- * HINT: Search Google "append to array in javascript"
- * HINT: Use the guesses variable
  */
 function saveGuessHistory(guess) {
-  // *CODE GOES BELOW HERE *
  guesses.push(guess);
 
 }
